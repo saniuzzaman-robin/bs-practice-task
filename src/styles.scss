@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.list-item-btn {
+  height: 40px;
+  background: rgb(149, 235, 138);
+  padding: 0px 16px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(149, 235, 138, 0.713);
+  }
+}
+.pm-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

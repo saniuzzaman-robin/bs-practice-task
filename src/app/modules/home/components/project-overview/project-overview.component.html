@@ -1,0 +1,45 @@
+<div class="overview-container">
+  <h1>Project Cost Estimation</h1>
+  <div class="overview-container__btn-list">
+    <button
+      class="overview-container__btn-list__btn"
+      (click)="addNewResource(1)"
+    >
+      + PM
+    </button>
+    <button
+      class="overview-container__btn-list__btn"
+      (click)="addNewResource(2)"
+    >
+      + Developer
+    </button>
+    <button
+      class="overview-container__btn-list__btn"
+      (click)="addNewResource(3)"
+    >
+      + QA
+    </button>
+  </div>
+  <div class="overviw-container__calculation-summary">
+    <table>
+      <tr>
+        <td class="title"><h2>Total Cost:</h2></td>
+        <td>
+          <h2>{{ totalCost }}</h2>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Project Manager:</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td class="title">Developer:</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td class="title">Quality Assurance:</td>
+        <td>500</td>
+      </tr>
+    </table>
+  </div>
+</div>
