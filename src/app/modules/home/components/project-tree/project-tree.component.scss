@@ -41,7 +41,7 @@
 .pm-btns {
   display: flex;
   flex-direction: row;
-  min-width: fit-content;
+  min-width: max-content;
 }
 .mat-nested-tree-node .list-container {
   margin-top: 16px;
