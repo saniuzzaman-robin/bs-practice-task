@@ -1,14 +1,54 @@
-.tree-container {
-  width: 100%;
-  height: 100%;
-  padding: 16px;
+.example-tree-invisible {
+  display: none;
 }
-.list-item-btn {
-  height: 40px !important;
-  width: 60px !important;
-  padding: 8px 16px;
+.example-tree ul,
+.example-tree li {
+  list-style-type: none;
+}
+
+/* silly UX, they want a border in the full width of the tree between tree nodes */
+.example-tree {
+  position: relative;
+}
+
+.example-tree-node-name {
+  flex: 1 1 auto;
+}
+.mdc-button.add-btn {
+  height: 40px;
+  background-color: rgb(149, 235, 138);
+  border-radius: 8px;
+}
+.ml-4 {
+  margin-left: 12px;
+}
+.ml-15 {
+  margin-left: 60px;
+}
+.pm-container {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  background: rgb(206, 202, 202);
+  flex-direction: row;
+}
+.child-container {
+  margin-left: 152px;
+}
+.mat-nested-tree-node {
+  margin-top: 12px;
+}
+.mat-tree-node {
+  margin-top: 8px;
+}
+.pm-btns {
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+}
+.mat-nested-tree-node .list-container {
+  margin-top: 16px;
+}
+.mat-nested-tree-node .child-container {
+  margin-top: 8px;
+}
+.child-container .mat-tree-node {
+  margin-top: 0px;
 }

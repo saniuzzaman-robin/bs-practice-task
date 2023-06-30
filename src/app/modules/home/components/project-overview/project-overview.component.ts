@@ -1,4 +1,10 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { ProjectManagerService } from '../../services/project-manager.service';
 import { Subscription } from 'rxjs';
 
@@ -10,26 +16,26 @@ import { Subscription } from 'rxjs';
 export class ProjectOverviewComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
   totalCost: number = 0;
-  constructor(private _projectManagerService: ProjectManagerService) {
-  }
+  constructor(private _projectManagerService: ProjectManagerService) {}
   ngOnInit(): void {
     this.subscriptions.push(
-      this._projectManagerService.addCost.subscribe(res => {
-        if(res) {
-          this.totalCost += res;
+      this._projectManagerService.addCost.subscribe((resourceType) => {
+        if (resourceType) {
+          this.totalCost +=
+            resourceType === 1 ? 300 : resourceType === 2 ? 1000 : 500;
         }
       }),
-      this._projectManagerService.resetCost.subscribe(res => {
-        if(res) {
+      this._projectManagerService.resetCost.subscribe((res) => {
+        if (res) {
           this.totalCost = 0;
         }
       })
     );
   }
   ngOnDestroy(): void {
-      this.subscriptions.forEach(item => item.unsubscribe());
+    this.subscriptions.forEach((item) => item.unsubscribe());
   }
-  addNewResource(value: number): void {
-    this._projectManagerService.addResource.next(value);
+  addNewResource(type: number): void {
+    this._projectManagerService.addResource.next(type);
   }
 }

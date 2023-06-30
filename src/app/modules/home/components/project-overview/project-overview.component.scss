@@ -16,14 +16,8 @@
   align-items: center;
   gap: 16px;
 }
-.overview-container__btn-list__btn {
+.mdc-button.overview-container__btn-list__btn {
   height: 40px;
-  background: rgb(149, 235, 138);
-  padding: 0px 16px;
-  border: 0;
+  background-color: rgb(149, 235, 138);
   border-radius: 8px;
-  cursor: pointer;
-  &:hover {
-    background: rgba(149, 235, 138, 0.713);
-  }
 }
